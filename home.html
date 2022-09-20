@@ -1,63 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BUP COURSE MATERIAL ARCHIVE</title>
-  <style>
-    body{
-      font-family:  helvetica,Verdana, Geneva, sans-serif;
-    }
-    h3{
-      color: black;
-      text-align: center;
-    }
-    * {
-  box-sizing: border-box;
-}
-
-img{
-  float: left;
-  width: 700px;
-  height:500px;
-  margin-right: 15px;
-  
-}
-.left{
-  padding: 10px;
-  float: left;
-  width: 30%;
-}
-.main{
-  padding: 10px;
-  float: left;
-  width: 40%;
-}
-.right{
-  padding: 10px;
-  float: left;
-  width: 30%;
-}
-
-
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUP COURSE MATERIAL ARCHIVE</title>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="JS/home.js" defer></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="CSS/home.css">
 </head>
 <body>
-  <div class="left">
-
-  </div>
-  <div class="main">
-    <h3>BUP COURSE MATERIAL ARCHIVE</h3>
-  </div>
-  <div class="right">
-    <a href="login.html"><h3>Login</h3></a>
-    <a href="signup.html"><h3>Signup</h3></a>
-  </div>
-  <div class="row">
-    <p>
-      <img src="image/BUP_Lake.jpg" alt="BUP">
-      <h1>WELCOME TO THIS WEBSITE</h1></p>
-  </div>
+    <nav class="navbar">
+        <div class="title">COURSE MATERIAL ARCHIVE</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="home1.html">home</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Signup</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p> 
+        <img src="image/watercolor-abstract-purple-background_23-2149120778.jpg" alt="BUP" style="height: 700px; width: 1400px;">
+        <h1><br><br>WELCOME TO BUP COURSE MATERIAL ARCHIVE</h1>
+        <hr style="height:2px;border-width:0;color:blue;background-color: blue">
+        This plugin is developed for  finding available details of the courses in your 
+semester,and also archived materials and assignments of your course. Here you will get all kinds of academic guideline & necessary documents. 
+<br><br>Both Student and teacher can use this website for educational purpose.<br><br>
+<button type="button" onclick="window.location.href='signup.html';">Student</button>
+<button type="button" onclick="alert('Hello world!')">Teacher</button>
+<button type="button" onclick="alert('Hello world!')">Admin</button>
+    </p>
 </body>
-</html>
+</html> 
