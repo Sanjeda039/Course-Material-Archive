@@ -4,7 +4,10 @@
   font-weight: 700px;
 }
 body{
-  background-color: #0974E1;
+  background-image: url("image\abstract-watercolor-pastel-background_87374-139.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
 }
 .parent{
   margin: 150px;

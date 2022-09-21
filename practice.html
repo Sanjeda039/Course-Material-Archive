@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            margin: .5rem;
+            color: blue;
+        }
+
+        .navbar-links ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar-links li {
+            list-style: none;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: black;
+            padding: 1rem;
+            display: block;
+        }
+
+        .navbar-links li:hover {
+            color: wheat;
+            background-color: whitesmoke;
+        }
+
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: azure;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: wheat;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .navbar-links input[type=text] {
+            float: right;
+            padding: 6px;
+            border: 1px, black;
+            font-size: 17px;
+            margin-top: 10px;
+        }
+
+        .navbar-links .search-container button {
+            float: right;
+            margin-top: 10px;
+            background: blue;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .navbar-links .search-container button:hover {
+            background: #ccc;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar-links .search-container {
+                float: none;
+            }
+
+            .navbar a,
+            .navbar-links input[type=text],
+            .navbar-links .search-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .navbar-links input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" style="background-color: white; position: fixed; width: 100%;">
+        <div class="title">COURSE MATERIAL ARCHIVE</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li class="search-container"><input type="text" placeholder="Search.."><button type="submit"><i
+                            class="fa fa-search"></i></button></li>
+                <li><a href="student_home.html">home</a></li>
+                <li><a href="#course">course</a></li>
+                <li><a href="#note">Note</a></li>
+                <li><a href="#book">Book</a></li>
+                <li><a href="#question">Question</a></li>
+                <li><a href="#archive">Archive</a></li>
+                <li><a href="home.html">logout</output></a></li>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"><i class='bx bx-user-circle'
+                                style='color:rgba(0,0,0,0.66)'></i>Sanjeda<i class='bx bx-chevron-down'></i></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br>
+    <div style="height: 500px; width: 100%; background-color: aliceblue;">
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1Egh4v9kaWDzKcdZM-vUZwfIt4PuG5UOg#list" style="width:100%; height:600px; border:0;"></iframe>
+    </div>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
+
