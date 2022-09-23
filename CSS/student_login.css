@@ -1,10 +1,9 @@
 *{
-  font-family: inria serif;
   font-style: normal;
   font-weight: 700px;
 }
 body{
-  background-image: url("image\abstract-watercolor-pastel-background_87374-139.jpg");
+  background-color: aliceblue;
   background-repeat: no-repeat;
   background-attachment: scroll;
 
@@ -14,16 +13,17 @@ body{
   display: flex;
 }
 .div1{
-  background-color: #0F224C;
-  width: 400px;
-  height: 300px;
+  font-family: roboto;
+  background-color: #234569;
+  width: 500px;
+  height: 500px;
   padding: 70px;
   color: white;
 }
 .div2{
   background-color: white;
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   padding: 70px;
   float: left;
 }

@@ -17,7 +17,7 @@
   <body>
     <div class="parent">
       <div class="div1" style="">
-        <h1 style="font-size: 50px">Sign up</h1>
+        <h1 style="font-size: 50px">Log in</h1>
         <br />
         <p style="font-size: 20px">
           Welcome to BUP Course Material Archive.<br /><br />
@@ -27,56 +27,28 @@
       </div>
       <div class="div2">
         <p style="font-size: 20px">Join as</p>
-        <div
-          class="btn-group"
-          style="
-            border-style: solid;
-            border-width: 1px;
-            width: 100%;
-            border-radius: 5px;
-          "
-        >
-          <button class="button1" style="width: 33.3%">Student</button>
-          <button class="button2" style="width: 33.3%">Admin</button>
-          <button class="button3" style="width: 33%">Teacher</button>
-        </div>
-        <br />
-        <form action="connect.php" method="post">
+        <form action="database/connect_login.php" method="post">
           <table>
             <tr>
-              <td>Name</td>
-              <td><input type="text" name="name" placeholder="Name" /></td>
-            </tr>
-            <tr>
               <td>ID</td>
-              <td><input type="number" name="id" placeholder="ID" /></td>
+              <td>
+                <input type="number" name="id" placeholder="ID" required />
+              </td>
             </tr>
             <tr>
               <td>Password</td>
               <td>
-                <input type="password" name="password" placeholder="Password" />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
               </td>
             </tr>
             <tr>
               <td>Email</td>
               <td><input type="email" name="email" placeholder="Email" /></td>
-            </tr>
-            <tr>
-              <td>Department</td>
-              <td>
-                <select name="department" id="department">
-                  <option value="ICT">ICT</option>
-                  <option value="ES">ES</option>
-                  <option value="MCJ">MCJ</option>
-                  <option value="BBA">BBA</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>Batch</td>
-              <td>
-                <input type="text" name="batch" placeholder="Batch20" />
-              </td>
             </tr>
           </table>
           <div
@@ -95,14 +67,13 @@
               text-align: match-parent;
             "
           >
-            Sign up
+            Login
           </button>
-          <input type="submit" onclick="myfunction()" />
         </form>
         <a
-          href="login.html"
+          href="signup_student.html"
           style="padding: 5px; width: 400px; margin-left: 6px"
-          >Already have an account</a
+          >Create an account</a
         >
       </div>
     </div>

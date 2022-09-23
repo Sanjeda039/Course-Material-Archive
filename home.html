@@ -1,49 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BUP COURSE MATERIAL ARCHIVE</title>
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email" />
+    <meta
+      name="google-signin-client_id"
+      content="YOUR_CLIENT_ID.apps.googleusercontent.com"
+    />
     <script src="JS/home.js" defer></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="CSS/home.css" />
     <style>
-        .container{
-            position: relative;
-            text-align: center;
-            color: azure;
-        }
-        .welcome{
-            position: absolute;
-            top: 100px;
-            left: 60px;
-            
-        }
+      .container {
+        position: relative;
+        text-align: center;
+        color: azure;
+      }
+      #container {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url(image/pexels-perfecto-capucine-1329571.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 1000px;
+        width: 100%;
+      }
+      .welcome {
+        position: absolute;
+        top: 100px;
+        left: 60px;
+        color: white;
+        font-size: 40px;
+      }
+      .sub_section {
+        position: absolute;
+        top: 155px;
+        left: 60px;
+        font-size: 15px;
+      }
+      .signup {
+        background-color: blue;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        position: absolute;
+        top: 210px;
+        left: 60px;
+        border-radius: 4px;
+      }
+      .login {
+        background-color: white;
+        border: 2px solid blue;
+        color: blue;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        position: absolute;
+        top: 210px;
+        left: 210px;
+        border-radius: 4px;
+      }
+      .signup:hover {
+        background-color: white;
+        color: blue;
+        border: 2px solid blue;
+      }
+      .login:hover {
+        background-color: blue;
+        color: white;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="title">COURSE MATERIAL ARCHIVE</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="home1.html">home</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Signup</a></li>
-            </ul>
-        </div>
+      <div class="title" style="color: blue">COURSE MATERIAL ARCHIVE</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="home.html">home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup_student.html">Signup</a></li>
+        </ul>
+      </div>
     </nav>
-    <div class="container">
-        <img src="image/pexels-perfecto-capucine-1329571.jpg" alt="" style="width: 100%;">
-        <div class="welcome"><h1>Welcome To Course Material Archive</h1></div>
-
+    <div class="container" id="container">
+      <div class="welcome">Learn without Limits</div>
+      <div class="sub_section">
+        Start your online learning jouney today<br />
+        with all the required resources
+      </div>
+      <button class="signup">Signup</button>
+      <button class="login">Log in</button>
     </div>
-</body>
-</html> 
+  </body>
+</html>

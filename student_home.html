@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <script src="JS/home.js" defer></script>
     <title>Document</title>
     <style>
         * {
@@ -115,13 +117,10 @@
         .navbar-links .search-container button:hover {
             background: #ccc;
         }
-
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 700px) {
             .navbar-links .search-container {
                 float: none;
             }
-
-            .navbar a,
             .navbar-links input[type=text],
             .navbar-links .search-container button {
                 float: none;
@@ -142,11 +141,6 @@
 <body>
     <nav class="navbar" style="background-color: white; position: fixed; width: 100%;">
         <div class="title">COURSE MATERIAL ARCHIVE</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
         <div class="navbar-links">
             <ul>
                 <li class="search-container"><input type="text" placeholder="Search.."><button type="submit"><i
@@ -168,35 +162,35 @@
                             <a href="#contact">Contact</a>
                         </div>
                     </div>
-                </li>
+                </li>                
             </ul>
         </div>
     </nav>
-    <div class="welcome" id="" style="background-color: #EBF3FD; height: 180px;">
-        <div style="color: navy; position:relative; left: 50px; top: 120px; font-size: 40px;">Welcome!</div>
+    <div class="welcome" id="" style="background-color: #EBF3FD; height: 180px; width: 100%;">
+        <div style="color: navy; position:relative; width: 100%; left: 50px; top: 120px; font-size: 40px;">Welcome!</div>
     </div>
     <div class="course" id="course" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;">Course Materials</p>
+        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Course Materials</p>
         <iframe src="see.html" frameborder="0" height="500px" width="1400px"></iframe>
     </div>
     <div class="book" id="book" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;">Books</p>
+        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Books</p>
         <iframe src="book.html" frameborder="0" height="500px" width="1400px"></iframe>
     </div>
     <div class="lab" id="lab" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;">Lab</p>
+        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Lab</p>
         <iframe src="lab.html" frameborder="0" height="500px" width="1400px"></iframe>
     </div>
     <div class="question" id="question" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;">Question</p>
+        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Question</p>
         <iframe src="question.html" frameborder="0" height="500px" width="1400px"></iframe>
     </div>
     <div class="note" id="note" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;">Note</p>
+        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Note</p>
         <iframe src="note.html" frameborder="0" height="500px" width="1400px"></iframe>
     </div>
     <div class="archive" id="archive" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;">Archive</p>
+        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Archive</p>
         <iframe src="archive.html" frameborder="0" height="500px" width="1400px"></iframe>
     </div>
     <script>
