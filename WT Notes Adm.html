@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WT Note</title>
+    <meta name="google-signin-scope" content="profile email" />
+    <meta
+      name="google-signin-client_id"
+      content="YOUR_CLIENT_ID.apps.googleusercontent.com"
+    />
+    <script src="JS/responsive.js" defer></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+         
+        .button1{position: absolute;
+            left:1 em;
+            border:none
+
+        }
+        .button2{position:absolute;
+        right:50%;
+        border:none
+
+}
+        .button1 {background-color: #008CBA;
+        color:white
+        ; padding: 10px 22px;
+                 text-align: center;
+} /* Add */
+                .button2 {background-color: #008CBA;
+                color:white;
+                padding: 10px 22px;
+                 text-align: center;} /* Remove */
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="title" style="color: blue">COURSE MATERIAL ARCHIVE</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li
+              class="search-container"
+              style="position: absolute; top: 13px; left: 540px"
+            >
+              <input type="text" placeholder="Search.." /><button
+                type="submit"
+                style="background-color: blue"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+            </li>
+            <li><a href="home.html">home</a></li>
+            <li><a href="login.html">Course</a></li>
+            <li><a href="signup_student.html">Note</a></li>
+            <li><a href="#">Book</a></li>
+            <li><a href="#">Question</a></li>
+            <li><a href="#">Lab</a></li>
+            <li><a href="#">Archive</a></li>
+            <li>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                  <i
+                    class="bx bx-user-circle"
+                    style="color: rgba(0, 0, 0, 0.66)"
+                  ></i
+                  >Sanjeda<i class="bx bx-chevron-down"></i>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">about</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <h3 style="text-align:justify;" float:50%;>WT NOTES </h3> 
+    <iframe src="https://drive.google.com/embeddedfolderview?id=14lvVjKgGIphLmIkwpdx6Dtdj37Eocu-x#list" style="width:50%; height:300px; border:5;"></iframe>
+    <br>
+    <button class="button1">Add</button>
+    <button class="button2">Remove</button>
+</body>
+</html>
