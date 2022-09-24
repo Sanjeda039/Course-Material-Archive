@@ -1,217 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student-home</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/responsive.css">
-    <script src="JS/home.js" defer></script>
-    <title>Document</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
-        body {
-            margin: 0;
-            padding: 0;
-        }
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <!-- header section starts      -->
 
-        .title {
-            font-size: 1.5rem;
-            margin: .5rem;
-            color: blue;
-        }
+    <header>
+      <a href="#" class="logo"
+        ></i>Course Material Archive</a
+      >
 
-        .navbar-links ul {
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+      <nav class="navbar">
+        <a class="active" href="#home">home</a>
+        <a href="#course">course</a>
+        <a href="#book">book</a>
+        <a href="#lab">lab</a>
+        <a href="#note">note</a>
+        <a href="#question">question</a>
+        <a href="#archive">archive</a>
+      </nav>
 
-        .navbar-links li {
-            list-style: none;
-        }
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-user"></a>
+      </div>
+    </header>
 
-        .navbar-links li a {
-            text-decoration: none;
-            color: black;
-            padding: 1rem;
-            display: block;
-        }
+    <!-- header section ends-->
 
-        .navbar-links li:hover {
-            color: wheat;
-            background-color: whitesmoke;
-        }
+    <!-- search form  -->
 
-        .dropbtn {
-            background-color: white;
-            color: black;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
+    <form action="" id="search-form">
+      <input
+        type="search"
+        placeholder="search here..."
+        name=""
+        id="search-box"
+      />
+      <label for="search-box" class="fas fa-search"></label>
+      <i class="fas fa-times" id="close"></i>
+    </form>
 
-        .dropbtn:hover,
-        .dropbtn:focus {
-            background-color: azure;
-        }
+    <!-- home section starts  -->
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+    <section class="home" id="home">
+      <div class="swiper-container home-slider">
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+        <div class="">
 
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown a:hover {
-            background-color: wheat;
-        }
-
-        .show {
-            display: block;
-        }
-
-        .navbar-links input[type=text] {
-            float: right;
-            padding: 6px;
-            border: 1px, black;
-            font-size: 17px;
-            margin-top: 10px;
-        }
-
-        .navbar-links .search-container button {
-            float: right;
-            margin-top: 10px;
-            background: blue;
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-        .navbar-links .search-container button:hover {
-            background: #ccc;
-        }
-        @media screen and (max-width: 700px) {
-            .navbar-links .search-container {
-                float: none;
-            }
-            .navbar-links input[type=text],
-            .navbar-links .search-container button {
-                float: none;
-                display: block;
-                text-align: left;
-                width: 100%;
-                margin: 0;
-                padding: 14px;
-            }
-
-            .navbar-links input[type=text] {
-                border: 1px solid #ccc;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <nav class="navbar" style="background-color: white; position: fixed; width: 100%;">
-        <div class="title">COURSE MATERIAL ARCHIVE</div>
-        <div class="navbar-links">
-            <ul>
-                <li class="search-container"><input type="text" placeholder="Search.."><button type="submit"><i
-                            class="fa fa-search"></i></button></li>
-                <li><a href="student_home.html">home</a></li>
-                <li><a href="#course">course</a></li>
-                <li><a href="#note">Note</a></li>
-                <li><a href="#book">Book</a></li>
-                <li><a href="#question">Question</a></li>
-                <li><a href="#archive">Archive</a></li>
-                <li><a href="home.html">logout</output></a></li>
-                <li>
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn"><i class='bx bx-user-circle'
-                                style='color:rgba(0,0,0,0.66)'></i>Sanjeda<i class='bx bx-chevron-down'></i></button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
-                        </div>
-                    </div>
-                </li>                
-            </ul>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>WELCOME To</span>
+                    <h3>Course Material Archive</h3>
+                    <p>start your online learning journey today without any break</p>
+                </div>
+                <div class="image">
+                    <img src="image/home.webp" alt="">
+                </div>
+            </div>
         </div>
-    </nav>
-    <div class="welcome" id="" style="background-color: #EBF3FD; height: 180px; width: 100%;">
-        <div style="color: navy; position:relative; width: 100%; left: 50px; top: 120px; font-size: 40px;">Welcome!</div>
     </div>
-    <div class="course" id="course" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Course Materials</p>
-        <iframe src="see.html" frameborder="0" height="500px" width="1400px"></iframe>
-    </div>
-    <div class="book" id="book" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Books</p>
-        <iframe src="book.html" frameborder="0" height="500px" width="1400px"></iframe>
-    </div>
-    <div class="lab" id="lab" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Lab</p>
-        <iframe src="lab.html" frameborder="0" height="500px" width="1400px"></iframe>
-    </div>
-    <div class="question" id="question" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Question</p>
-        <iframe src="question.html" frameborder="0" height="500px" width="1400px"></iframe>
-    </div>
-    <div class="note" id="note" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Note</p>
-        <iframe src="note.html" frameborder="0" height="500px" width="1400px"></iframe>
-    </div>
-    <div class="archive" id="archive" style="background-color: #F9F9FB;">
-        <p style="font-size: 30px; position: relative; left: 50px;"><br><br>Archive</p>
-        <iframe src="archive.html" frameborder="0" height="500px" width="1400px"></iframe>
-    </div>
-    <script>
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+    </section>
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-</body>
+    <!-- home section ends -->
 
+    <!-- dishes section starts  -->
+
+    <section class="dishes" id="course">
+      <h1 class="heading">Course Materials</h1>
+      <div class="box-container">
+        <div class="box">
+          <a href="coursestudent/SRE.html" class="fas fa-eye"></a>
+          <img
+            src="image/sre.jpeg"
+            alt=""
+          />
+          <h3>Software Requirement and Analysis</h3>
+          <a href="coursestudent/SRE.html" class="btn">course</a>
+        </div>
+
+        <div class="box">
+          <a href="coursestudent/WT.html" class="fas fa-eye"></a>
+          <img
+          src="image/WT.webp"
+          alt="" />
+          <h3>Web Technology</h3>
+          <a href="coursestudent/WT.html" class="btn">course</a>
+        </div>
+
+        <div class="box">
+          <a href="coursestudent/TS.html" class="fas fa-eye"></a>
+          <img
+            src="image/ts.jpeg"
+            alt=""
+          />
+          <h3>Telecommunication System</h3>
+          <a href="coursestudent/TS.html" class="btn">course</a>
+        </div>
+        <div class="box">
+          <a href="coursestudent/ETA.html" class="fas fa-eye"></a>
+          <img
+            src="image/eta.jpeg"
+            alt=""
+          />
+          <h3>Electromagnetic Theory and Antenna</h3>
+          <a href="coursestudent/ETA.html" class="btn">course</a>
+        </div>
+
+        <div class="box">
+          <a href="coursestudent/MCA.html" class="fas fa-eye"></a>
+          <img
+            src="image/MCA.jpeg"
+            alt=""
+          />
+          <h3>Microprocessor and Computer Architecture</h3>
+          <a href="coursestudent/MCA.html" class="btn">course</a>
+        </div>
+      </div>
+    </section>
+    <section class="dishes" id="book">
+      <h1 class="heading">Books</h1>
+      <div class="box-container">
+        <div class="box">
+          <a href="book/srebookstudent.html" class="fas fa-eye"></a>
+          <img
+            src="image/SRE book.png"
+            alt=""
+          />
+          <h3>Software Requirement and Analysis</h3>
+          <a href="book/srebookstudent.html" class="btn">Book</a>
+        </div>
+        <div class="box">
+          <a href="book/wtbook.html" class="fas fa-eye"></a>
+          <img
+          src="image/WT Book.png"
+          alt="" />
+          <h3>Web Technology</h3>
+          <a href="book/wtbookstudent.html" class="btn">Book</a>
+        </div>
+
+        <div class="box">
+          <a href="book/tsbookstudent.html" class="fas fa-eye"></a>
+          <img
+            src="image/TS Book.png"
+            alt=""
+          />
+          <h3>Telecommunication System</h3>
+          <a href="book/tsbookstudent.html" class="btn">Book</a>
+        </div>
+        <div class="box">
+          <a href="book/etabookstudent.html" class="fas fa-eye"></a>
+          <img
+            src="image/ETA Book.png"
+            alt=""
+          />
+          <h3>Electromagnetic Theory and Antenna</h3>
+          <a href="book/etabookstudent.html" class="btn">Book</a>
+        </div>
+
+        <div class="box">
+          <a href="book/mcabookstudent.html" class="fas fa-eye"></a>
+          <img
+            src="image/mca book.jpg"
+            alt=""
+          />
+          <h3>Microprocessor and Computer Architecture</h3>
+          <a href="book/mcabookstudent.html" class="btn">Book</a>
+        </div>
+      </div>
+    </section>
+    <section class="dishes" id="note">
+      <h1 class="heading">Notes</h1>
+      <div class="box-container">
+        <div class="box">
+          <a href="note/SRE-note.html" class="fas fa-eye"></a>
+          <img
+            src="image/sre.png"
+            alt=""
+          />
+          <h3>Software Requirement and Analysis</h3>
+          <a href="note/SRE-note.html" class="btn">Note</a>
+        </div>
+
+        <div class="box">
+          <a href="note/WT-Notes.html" class="fas fa-eye"></a>
+          <img
+          src="image/WT.png"
+          alt="" />
+          <h3>Web Technology</h3>
+          <a href="note/WT-Notes.html" class="btn">Note</a>
+        </div>
+
+        <div class="box">
+          <a href="note/TS-Note.html" class="fas fa-eye"></a>
+          <img
+            src="image/TS.png"
+            alt=""
+          />
+          <h3>Telecommunication System</h3>
+          <a href="note/TS-Note.html" class="btn">Note</a>
+        </div>
+        <div class="box">
+          <a href="note/ETA-Notes.html" class="fas fa-eye"></a>
+          <img
+            src="image/ETA.png"
+            alt=""
+          />
+          <h3>Electromagnetic Theory and Antenna</h3>
+          <a href="note/ETA-Notes.html" class="btn">Note</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-eye"></a>
+          <img
+            src="image/MCA.jpeg"
+            alt=""
+          />
+          <h3>Microprocessor and Computer Architecture</h3>
+          <a href="note/MCA-Note.html" class="btn">Note</a>
+        </div>
+      </div>
+    </section>
+    <section class="dishes" id="lab">
+      <h1 class="heading">Labs</h1>
+      <div class="box-container">
+        <div class="box">
+          <a href="coursestudent/SRE-LAB.html" class="fas fa-eye"></a>
+          <img
+            src="image/sre lab.jpg"
+            alt=""
+          />
+          <h3>Software Requirement and Analysis Lab</h3>
+          <a href="coursestudent/SRE-LAB.html" class="btn">Lab</a>
+        </div>
+
+        <div class="box">
+          <a href="coursestudent/WT-LAB.html" class="fas fa-eye"></a>
+          <img
+          src="image/WT LAB.jpg"
+          alt="" />
+          <h3>Web Technology Lab</h3>
+          <a href="coursestudent/WT-LAB.html" class="btn">Lab</a>
+        </div>
+
+        <div class="box">
+          <a href="coursestudent/TS-LAB.html" class="fas fa-eye"></a>
+          <img
+            src="image/TS LAB.jpg"
+            alt=""
+          />
+          <h3>Telecommunication System Lab</h3>
+          <a href="coursestudent/TS-LAB.html" class="btn">Lab</a>
+        </div>
+
+        <div class="box">
+          <a href="coursestudent/MCA-LAB.html" class="fas fa-eye"></a>
+          <img
+            src="image/MCA Lab.jpg"
+            alt=""
+          />
+          <h3>Microprocessor and Computer Architecture Lab</h3>
+          <a href="coursestudent/MCA-LAB.html" class="btn">Lab</a>
+        </div>
+      </div>
+    </section>
+    <section class="dishes" id="question">
+      <h1 class="heading">Questions</h1>
+      <div class="box-container">
+        <div class="box">
+  
+          <a href="#" class="fas fa-eye"></a>
+          <img
+            src="image/SRE question.png"
+            alt=""
+          />
+          <h3>Software Requirement and Analysis</h3>
+        
+          <a href="#" class="btn">Question</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-eye"></a>
+          <img
+          src="image/WT question.png"
+          alt="" />
+          <h3>Web Technology</h3>
+          <a href="#" class="btn">Question</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-eye"></a>
+          <img
+            src="image/TS question.png"
+            alt=""
+          />
+          <h3>Telecommunication System</h3>
+          <a href="#" class="btn">Question</a>
+        </div>
+        <div class="box">
+          <a href="#" class="fas fa-eye"></a>
+          <img
+            src="image/ETA.png"
+            alt=""
+          />
+          <h3>Electromagnetic Theory and Antenna</h3>
+          <a href="#" class="btn">Question</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-eye"></a>
+          <img
+            src="image/MCA question.png"
+            alt=""
+          />
+          <h3>Microprocessor and Computer Architecture</h3>
+          <a href="#" class="btn">Question</a>
+        </div>
+      </div>
+    </section>
+    <section class="dishes" id="archive">
+      <h1 class="heading">Archive</h1>
+      <div class="box-container">
+        <div class="box">
+          <a href="#" class="fas fa-eye"></a>
+          <img
+            src="image/2018.png"
+            alt=""
+          />
+          <h3>2018</h3>
+          
+          <a href="#" class="btn">Archive</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-eye"></a>
+          <img
+          src="image/2019.png"
+          alt="" />
+          <h3>2019</h3>
+          <a href="#" class="btn">Archive</a>
+        </div>
+
+        <div class="box">
+          
+          <a href="#" class="fas fa-eye"></a>
+          <img
+            src="image/2020.png"
+            alt=""
+          />
+          <h3>2020</h3>
+          <a href="#" class="btn">Archive</a>
+        </div>
+        <div class="box">
+          <a href="#" class="fas fa-eye"></a>
+          <img
+            src="image/2021.png"
+            alt=""
+          />
+          <h3>2021</h3>
+          <a href="#" class="btn">Archive</a>
+        </div>
+      </div>
+    </section>
+
+  
+         
+    
+    
+    <!-- dishes section ends -->
+
+    <!-- about section starts  -->
+
+    <!-- order section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>locations</h3>
+          <a href="#">Bangladesh</a>
+          <a href="#">japan</a>
+          <a href="#">russia</a>
+          <a href="#">USA</a>
+          <a href="#">france</a>
+        </div>
+
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home">home</a>
+          <a href="#course">Course</a>
+          <a href="#lab">Lab</a>
+          <a href="#questiom">Question</a>
+          <a href="#note">Note</a>
+          <a href="#archive">Archive</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#">+01774-608677</a>
+          <a href="#">+111-222-3333</a>
+          <a href="#">sanjeda0390@gmail.com</a>
+          <a href="#">Dhaka, Bangladesh - 1206</a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">twitter</a>
+          <a href="#">instagram</a>
+          <a href="#">linkedin</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        copyright @ 2022 by <span>ms. web designer</span>
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- loader part  -->
+    <div class="loader-container">
+      <img src="image/loader.gif" alt="" />
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="JS/script.js"></script>
+  </body>
 </html>

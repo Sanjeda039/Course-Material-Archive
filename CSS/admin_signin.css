@@ -1,0 +1,62 @@
+*{
+    font-style: normal;
+    font-weight: 700px;
+  }
+  body{
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  
+  }
+  .parent{
+    margin: 150px;
+    display: flex;
+  }
+  .div1{
+    font-family: roboto;
+    background-color: #234569;
+    width: 500px;
+    height: 500px;
+    padding: 70px;
+    color: white;
+  }
+  .div2{
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    padding: 70px;
+    float: left;
+  }
+  .btn-group button {
+    border: 0ch;
+    padding: 15px 39px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  
+  }
+  .btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+  background-color: #0974E1;
+  color: white;
+  }
+  .button2{
+  background-color: #0974E1;
+  color: white;
+  }
+  .button1,.button3{
+  background-color: white;
+  color: #0974E1;
+  }
+  form{
+    margin: auto;
+  }

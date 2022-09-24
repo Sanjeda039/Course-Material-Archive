@@ -1,88 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-scope" content="profile email" />
+    <meta
+      name="google-signin-client_id"
+      content="YOUR_CLIENT_ID.apps.googleusercontent.com"
+    />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <link rel="stylesheet" href="CSS/teacher_signin.css">
+    <link rel="stylesheet" href="CSS/teacher_signin.css" />
     <title>Signup-student</title>
-    <style>
-    </style>
-</head>
-<body>
+    <style></style>
+  </head>
+  <body>
+
+    <!-- header section ends-->
+
+    <!-- search form  -->
     <div class="parent">
-        <div class="div1">
-            <h1>Sign up</h1><br>Welcome to BUP Course Material Archive.<br><br>
-By logging in you are agrreing to the terms and policy of BUP Course Material Archive.
+      <div class="div1" style="">
+        <h1 style="font-size: 50px">Sign up</h1>
+        <br />
+        <p style="font-size: 20px">
+          Welcome to BUP Course Material Archive.<br /><br />
+          By logging in you are agrreing to the terms and policy of BUP Course
+          Material Archive.
+        </p>
+      </div>
+      <div class="div2">
+        <p style="font-size: 20px">Join as</p>
+        <div
+          class="btn-group"
+          style="
+            border-style: solid;
+            border-width: 1px;
+            width: 100%;
+            border-radius: 5px;
+          "
+        >
+          <a href="signup_student.html"><button class="button1" style="width: 33.3%">Student</button></a>
+          <a href="signup_admin.html"><button class="button2" style="width: 33.3%">Admin</button></a>
+          <a href="signup-teacher.html"><button class="button3" style="width: 33%">Teacher</button></a>
         </div>
-        <div class="div2">
-            Join as <br><br>
-            <div class="btn-group">
-                <button class="button1" style="width: 33.3%;">Student</button>
-                <button class="button2" style="width: 33.3%;">Admin</button>
-                <button class="button3" style="width: 33%">Teacher</button>
-            </div>
-            <br>
-            <form action="post">
-                <table>
-                    <tr>
-                        <td>Name</td>
-                        <td><input type="text" name="name" placeholder="Name"></td>
-                    </tr>
-                    <tr>
-                        <td>ID</td>
-                        <td><input type="number" name="id" placeholder="ID"></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="password" placeholder="Password"></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><input type="email" name="email" placeholder="Email"></td>
-                    </tr>
-                    <tr>
-                        <td>Department</td>
-                        <td>
-                            <select name="batch" id="batch">
-                                <option value="ICT">ICT</option>
-                                <option value="ES">ES</option>
-                                <option value="MCJ">MCJ</option>
-                                <option value="BBA">BBA</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Batch</td>
-                        <td>
-                            <input type="text" name="batch" placeholder="Batch20">
-                        </td>
-                    </tr>
-                </table>
-                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="padding:5px; width: 400px;"></div>
-                <button style="padding:5px; width: 400px; margin-left: 6px; text-align: match-parent;">Sign up</button>
-            </form>
-            <a href="login.html" style="padding:5px; width: 400px; margin-left: 6px;">Already have an account</a>
-        </div>
+        <br />
+        <form action="database/connect_teacher.php" method="post">
+          <table>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" placeholder="Name" /></td>
+            </tr>
+            <tr>
+              <td>ID</td>
+              <td><input type="number" name="id" placeholder="ID" /></td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td>
+                <input type="password" name="password" placeholder="Password" />
+              </td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td><input type="email" name="email" placeholder="Email" /></td>
+            </tr>
+            <tr>
+              <td>Department</td>
+              <td>
+                <select name="department" id="department">
+                  <option value="ICT">ICT</option>
+                  <option value="ES">ES</option>
+                  <option value="MCJ">MCJ</option>
+                  <option value="BBA">BBA</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <div
+            class="g-signin2"
+            data-onsuccess="onSignIn"
+            data-theme="dark"
+            style="padding: 5px; width: 400px"
+          ></div>
+          <button
+            id="myBtn"
+            type="submit"
+            style="
+              padding: 5px;
+              width: 400px;
+              margin-left: 6px;
+              text-align: match-parent;
+            "
+          >
+            Sign up
+          </button>
+        </form>
+        <a
+          href="teacher_login.html"
+          style="padding: 5px; width: 400px; margin-left: 6px"
+          >Already have an account</a
+        >
+      </div>
     </div>
     <script>
-        function onSignIn(googleUser) {
-          // Useful data for your client-side scripts:
-          var profile = googleUser.getBasicProfile();
-          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-          console.log('Full Name: ' + profile.getName());
-          console.log('Given Name: ' + profile.getGivenName());
-          console.log('Family Name: ' + profile.getFamilyName());
-          console.log("Image URL: " + profile.getImageUrl());
-          console.log("Email: " + profile.getEmail());
-  
-          // The ID token you need to pass to your backend:
-          var id_token = googleUser.getAuthResponse().id_token;
-          console.log("ID Token: " + id_token);
-        }
-      </script>
-</body>
+      document.getElementById("myBtn").addEventListener("click", myFunction);
+      function myFunction() {
+        window.location.href = "http://programminghead.com";
+      }
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log("Full Name: " + profile.getName());
+        console.log("Given Name: " + profile.getGivenName());
+        console.log("Family Name: " + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+    </script>
+  </body>
 </html>

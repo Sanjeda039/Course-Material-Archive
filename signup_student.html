@@ -36,12 +36,18 @@
             border-radius: 5px;
           "
         >
-          <button class="button1" style="width: 33.3%">Student</button>
-          <button class="button2" style="width: 33.3%">Admin</button>
-          <button class="button3" style="width: 33%">Teacher</button>
+          <a href="signup_student.html"
+            ><button class="button1" style="width: 33.3%">Student</button></a
+          >
+          <a href="signup_admin.html"
+            ><button class="button2" style="width: 33.3%">Admin</button></a
+          >
+          <a href="signup-teacher.html"
+            ><button class="button3" style="width: 33%">Teacher</button></a
+          >
         </div>
         <br />
-        <form action="connect.php" method="post">
+        <form action="database/connect.php" method="post">
           <table>
             <tr>
               <td>Name</td>
@@ -97,10 +103,9 @@
           >
             Sign up
           </button>
-          <input type="submit" onclick="myfunction()" />
         </form>
         <a
-          href="login.html"
+          href="student_login.html"
           style="padding: 5px; width: 400px; margin-left: 6px"
           >Already have an account</a
         >
