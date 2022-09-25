@@ -1,4 +1,5 @@
 <?php
+session_start();
 $id = $_POST['id'];
 $password = $_POST['password'];
 $email = $_POST['email'];
@@ -18,10 +19,13 @@ if ($conn->connect_error) {
             header("Location: ../student_home.html", true, 301);
         } else {
             echo "invalid";
+            header("Location: ../admin_login.html", true, 301);
         }
     } else {
+        header("Location: ../admin_login.html", true, 301);
         echo "invalid email";
     }
+    $_SESSION['email']=$email;
     header("Location: ../admin_home.html", true, 301);
     exit();
 } 
