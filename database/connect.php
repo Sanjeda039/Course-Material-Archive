@@ -16,9 +16,9 @@ if ($conn->connect_error) {
     $stmt->execute();
     $execval = $stmt->execute();
     echo $execval;
+    header("Location: ../student_login.html", true, 301);
     echo "registration sucsessfully.....";
     $stmt->close();
     $conn->close();
+    exit();
 }
-header("Location: student_home.html", true, 301);
-exit();

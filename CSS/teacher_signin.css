@@ -16,14 +16,14 @@ body{
   font-family: roboto;
   background-color: #234569;
   width: 500px;
-  height: 500px;
+  height: 900px;
   padding: 70px;
   color: white;
 }
 .div2{
   background-color: white;
   width: 500px;
-  height: 500px;
+  height: 900px;
   padding: 70px;
   float: left;
 }
@@ -60,3 +60,42 @@ color: #0974E1;
 form{
   margin: auto;
 }
+
+.emailText,
+.passText,
+.numberText,
+.nameText{
+	display: block;
+	font-weight: 300;
+	font-style: italic;
+	padding: 5px;
+}
+label.valid .emailText,
+label.valid .passText,
+label.valid .numberText,
+label.valid .nameText{
+	color: #00ff00;
+}
+label.invalid .emailText,
+label.invalid .passText,
+label.invalid .numberText,
+label.invalid .nameText{
+	color: #f00;
+}
+label.valid::before,
+label.invalid::before{
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 18px;
+	right: 5px;
+	z-index: 100;
+}
+label.valid::before{
+	background: url(check.svg)no-repeat center /cover;
+}
+label.invalid::before{
+	background: url(error.png)no-repeat center /cover;
+}
+

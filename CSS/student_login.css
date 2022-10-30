@@ -16,22 +16,22 @@ body{
   font-family: roboto;
   background-color: #234569;
   width: 500px;
-  height: 500px;
+  height: 950px;
   padding: 70px;
   color: white;
 }
 .div2{
   background-color: white;
   width: 500px;
-  height: 500px;
+  height: 950px;
   padding: 70px;
   float: left;
 }
 .btn-group button {
   border: 0ch;
   padding: 15px 39px; /* Some padding */
-cursor: pointer; /* Pointer/hand icon */
-float: left; /* Float the buttons side by side */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
 
 }
 .btn-group:after {
@@ -60,3 +60,5 @@ color: #0974E1;
 form{
   margin: auto;
 }
+
+

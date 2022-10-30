@@ -1,0 +1,12 @@
+
+
+email-pattern: /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/
+
+Email-requirements: Must be a valid email address.
+
+=========================================================
+
+password pattern: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/
+
+password-requirements:  Your password must be at least 6 
+						characters as well as contain at least one uppercase, one lowercase, and one number.

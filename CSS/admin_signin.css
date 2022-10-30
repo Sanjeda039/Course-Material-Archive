@@ -16,14 +16,14 @@
     font-family: roboto;
     background-color: #234569;
     width: 500px;
-    height: 500px;
+    height: 800px;
     padding: 70px;
     color: white;
   }
   .div2{
     background-color: white;
     width: 500px;
-    height: 500px;
+    height: 800px;
     padding: 70px;
     float: left;
   }
@@ -60,3 +60,9 @@
   form{
     margin: auto;
   }
+
+
+
+
+
+

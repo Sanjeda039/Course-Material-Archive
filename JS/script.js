@@ -87,3 +87,26 @@ function fadeOut(){
 }
 
 window.onload = fadeOut;
+function openPage() {
+  var x = document.getElementById("search-box").value;
+
+  if (x.toLowerCase() == "course") {
+      window.open("#course");
+  }
+  if (x.toLowerCase() == "book") {
+      window.open("#book");
+  }
+  if (x.toLowerCase() == "lab") {
+    window.open("#lab");
+}
+if (x.toLowerCase() == "note") {
+    window.open("#note");
+}
+if (x.toLowerCase() == "question") {
+  window.open("#question");
+}
+if (x.toLowerCase() == "archive") {
+  window.open("#archive");
+}
+
+}

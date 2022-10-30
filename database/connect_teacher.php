@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 } else {
     $stmt = $conn->prepare("insert into teacher(name,id,password,email,department)
     values(?,?,?,?,?)");
-    $stmt->bind_param("ssssi", $name, $id, $password, $email, $department);
+    $stmt->bind_param("sssss", $name, $id, $password, $email, $department);
     $stmt->execute();
     $execval = $stmt->execute();
     echo $execval;
@@ -19,5 +19,5 @@ if ($conn->connect_error) {
     $stmt->close();
     $conn->close();
 }
-header("Location: ../teacher_home.html", true, 301);
+header("Location: ../teacher_login.html", true, 301);
 exit();

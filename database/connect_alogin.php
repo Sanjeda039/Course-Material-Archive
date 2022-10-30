@@ -1,31 +1,25 @@
 <?php
-session_start();
-$id = $_POST['id'];
-$password = $_POST['password'];
-$email = $_POST['email'];
-$conn = new mysqli('localhost', 'root', '', 'course material archive');
-if ($conn->connect_error) {
-    echo "$conn->connect_error";
-    die('connection failed: ' . $conn->connect_error);
-} else{
-    $stmt = $conn->prepare("select * from admin where email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $stmt_result = $stmt->get_result();
-    if ($stmt_result->num_rows > 0) {
-        $data = $stmt_result->fetch_assoc();
-        if ($data['password'] === $password) {
-            echo "login sucsessful";
-            header("Location: ../student_home.html", true, 301);
-        } else {
-            echo "invalid";
-            header("Location: ../admin_login.html", true, 301);
-        }
-    } else {
-        header("Location: ../admin_login.html", true, 301);
-        echo "invalid email";
-    }
-    $_SESSION['email']=$email;
-    header("Location: ../admin_home.html", true, 301);
-    exit();
-} 
+	require_once 'conn.php';
+	session_start();
+	if(ISSET($_POST['login'])){
+		$id = $_POST['id'];
+		$password = $_POST['password'];
+	
+		$query = mysqli_query($conn, "SELECT * FROM `admin` WHERE `id` = '$id' AND `password` = '$password'") or die(mysqli_error());
+		$fetch = mysqli_fetch_array($query);
+		$row = mysqli_num_rows($query);
+		
+		if($row > 0){
+			$_SESSION['name']=$fetch['name'];
+			$_SESSION['id']=$fetch['id'];
+			$_SESSION['email']=$fetch['email'];
+			echo "<script>alert('Login Successfully!')</script>";
+			echo "<script>window.location='../admin_home.html'</script>";
+		}else{
+			echo "<script>alert('Invalid username or password')</script>";
+			echo "<script>window.location='../admin_login.html'</script>";
+		}
+		
+	}
+
+?>

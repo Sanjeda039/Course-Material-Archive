@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-scope" content="profile email" />
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="JS/home.js" defer></script>
+    <link rel="stylesheet" href="CSS/admin_signin.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="../CSS/login.css">
+    <title>Access</title>
+    <style>
+    .center {
+        text-align: center;
+        border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"></i>Course Material Archive</a>
+
+        <nav class="navbar">
+            <button class="btn" onclick="history.back()">Go Back</button>
+            <a href="../index.html">logout</a>
+            
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+    </header>
+
+    <!-- header section ends-->
+
+    <!-- search form  -->
+
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box" />
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    <div class="center">
+        <br><br><br><br><br><br><br>
+        <h3 style="font-size: 50px; text-align: center;">Upload Files</h3>
+        <p style="font-size: 30px; text-align: center;">Select to set Uploaded file private or publicly readable</p>
+        <br><br>
+        <form id="Form" style="text-align: center;">
+            <a href="https://script.google.com/macros/s/AKfycbx48-E7zf8YG2vHQZjrTFgl0g2eAtH5SxchOD0Lk2wrbCFCJ4dSORGk9-7UoTrFXDZACg/exec" style="font-size: 25px;"><input type="radio" name="link" value="private">private</a>
+            
+            <a href="https://script.google.com/macros/s/AKfycbynNdTbTIBUXXXJnKG_HGVuy5sKDNVH_p1yGFk019zIc73vn7CyN2gMB8bqjokDTrKw/exec" style="font-size: 25px;"><input type="radio" onclick="Form()" name="link" value="public" >public</a>
+            
+        </form>
+        <br><br><br><br><br>
+    </div>
+<br><br><br><br><br>
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">Bangladesh</a>
+                <a href="#">japan</a>
+                <a href="#">russia</a>
+                <a href="#">USA</a>
+                <a href="#">france</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html">home</a>
+                <a href="student_login.html">Login</a>
+                <a href="signup_student.html">Signup</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">+01774-608677</a>
+                <a href="#">+111-222-3333</a>
+                <a href="#">sanjeda0390@gmail.com</a>
+                <a href="#">Dhaka, Bangladesh - 1206</a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#">facebook</a>
+                <a href="#">twitter</a>
+                <a href="#">instagram</a>
+                <a href="#">linkedin</a>
+            </div>
+        </div>
+
+        <div class="credit">
+            copyright @ 2022 by <span>ms. web designer</span>
+        </div>
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- loader part  -->
+    <!-- loader part  -->
+    <div class="loader-container">
+        <img src="../image/loader.gif" alt="" />
+    </div>
+
+    <script src="https://unpkg.com/swiper@8.4.4/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="../JS/index.js"></script>
+    <script>
+        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log("Full Name: " + profile.getName());
+            console.log("Given Name: " + profile.getGivenName());
+            console.log("Family Name: " + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+
+            function Form(){
+            var selectvalue = $('input[name=link]:clicked','#Form').val();
+            if (selectvalue=="private")
+            {
+                window.open('admin_login.html','_self');
+                return true;
+            }
+            else if (selectvalue=="public")
+            {
+                window.open('admin_home.html','_self');
+                return true;
+            }
+            return false;
+        };
+    </script>
+</body>
+
+</html>

@@ -622,7 +622,14 @@ header .icons #menu-bars{
     section{
         padding:2rem;
     }
-
+    .navbar ul li:hover .sub_menu1 {
+        display: block;
+        position: absolute;
+        background: white;
+        margin-top: 20px;
+        margin-left: -15px;
+  
+      }
 
 }
 
@@ -662,6 +669,14 @@ header .icons #menu-bars{
     .home .home-slider .slide .content h3{
         font-size: 5rem;
     }
+    .navbar ul li:hover .sub_menu1 {
+        display: block;
+        position: absolute;
+        background: white;
+        margin-top: 20px;
+        margin-left: -15px;
+  
+      }
 
 }
 
@@ -679,6 +694,14 @@ header .icons #menu-bars{
     .order form .inputBox .input{
         width:100%;
     }
+    .navbar ul li:hover .sub_menu1 {
+        display: block;
+        position: absolute;
+        background: white;
+        margin-top: 20px;
+        margin-left: -15px;
+  
+      }
 
 }
 

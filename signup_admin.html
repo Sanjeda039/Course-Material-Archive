@@ -10,12 +10,55 @@
       content="YOUR_CLIENT_ID.apps.googleusercontent.com"
     />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="JS/home.js" defer></script>
     <link rel="stylesheet" href="CSS/admin_signin.css" />
-    
-    <title>Signup-student</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="CSS/validation.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="CSS/login.css">
+    <title>Signup-Admin</title>
     <style></style>
   </head>
   <body>
+    <header>
+      <a href="#" class="logo"
+        ></i>Course Material Archive</a
+      >
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="admin_login.html">Login</a>
+        <a class="active" href="signup_admin.html">Signup</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+      </div>
+    </header>
+
+    <!-- header section ends-->
+
+    <!-- search form  -->
+
+    <form action="" id="search-form">
+      <input
+        type="search"
+        placeholder="search here..."
+        name=""
+        id="search-box"
+      />
+      <label for="search-box" class="fas fa-search"></label>
+      <i class="fas fa-times" id="close"></i>
+    </form>
     <div class="parent">
       <div class="div1" style="">
         <h1 style="font-size: 50px">Sign up</h1>
@@ -51,22 +94,82 @@
         <form action="database/connect_admin.php" method="post">
           <table>
             <tr>
-              <td>Name</td>
-              <td><input type="text" name="name" placeholder="Name" /></td>
-            </tr>
-            <tr>
-              <td>ID</td>
-              <td><input type="number" name="id" placeholder="ID" /></td>
-            </tr>
-            <tr>
-              <td>Password</td>
+              <td style="font-size: 18px;">Name</td>
               <td>
-                <input type="password" name="password" placeholder="Password" />
+                <label class="nameBox">
+                <input style="margin: 10px 0;
+                width: 100%;
+                background: white;
+                color: black;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 18px;
+                border: none;
+                outline: black solid 1px;" type="text" id="name" name="name" placeholder="Name" />
+                <span class="nameText"></span>
+              </label>
               </td>
             </tr>
             <tr>
-              <td>Email</td>
-              <td><input type="email" name="email" placeholder="Email" /></td>
+              <td style="font-size: 18px;">ID</td>
+              <td>
+                <label class="idBox">
+                <input 
+                style="margin: 10px 0;
+                  width: 100%;
+                  background: white;
+                  color: black;
+                  padding: 10px;
+                  border-radius: 6px;
+                  font-size: 18px;
+                  border: none;
+                  outline: black solid 1px;"
+                type="number" name="id" placeholder="ID" id="id" required />
+                <span class="idText"></span>
+              </label>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 18px;">Password</td>
+              <td>
+                <label class="passBox">
+                <input
+                  style="margin: 10px 0;
+                  width: 100%;
+                  background: white;
+                  color: black;
+                  padding: 10px;
+                  border-radius: 6px;
+                  font-size: 18px;
+                  border: none;
+                  outline: black solid 1px;"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  id="password"
+                  required
+                />
+                <span class="passText"></span>
+              </label>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 18px;">Email</td>
+              <td><label class="emailBox">
+                <input 
+                style="margin: 10px 0;
+                width: 100%;
+                background: white;
+                color: black;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 18px;
+                border: none;
+                outline: black solid 1px;"
+                type="email" name="email" placeholder="Email" id="email" required/>
+                <span class="emailText"></span>
+              </label></td>
+                
             </tr>
           </table>
           <div
@@ -90,16 +193,64 @@
         </form>
         <a
           href="admin_login.html"
-          style="padding: 5px; width: 400px; margin-left: 6px"
+          style="padding: 5px; width: 400px; margin-left: 6px; font-size: 18px;"
           >Already have an account</a
         >
       </div>
     </div>
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>locations</h3>
+          <a href="#">Bangladesh</a>
+          <a href="#">japan</a>
+          <a href="#">russia</a>
+          <a href="#">USA</a>
+          <a href="#">france</a>
+        </div>
+
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="index.html">home</a>
+          <a href="student_login.html">Login</a>
+          <a href="signup_student.html">Signup</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#">+01774-608677</a>
+          <a href="#">+111-222-3333</a>
+          <a href="#">sanjeda0390@gmail.com</a>
+          <a href="#">Dhaka, Bangladesh - 1206</a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">twitter</a>
+          <a href="#">instagram</a>
+          <a href="#">linkedin</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        copyright @ 2022 by <span>ms. web designer</span>
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- loader part  -->
+    <!-- loader part  -->
+    <div class="loader-container">
+        <img src="image/loader.gif" alt="" />
+      </div>
+  
+      <script src="https://unpkg.com/swiper@8.4.4/swiper-bundle.min.js"></script>
+  
+      <!-- custom js file link  -->
+      <script src="JS/index.js"></script>
     <script>
-      document.getElementById("myBtn").addEventListener("click", myFunction);
-      function myFunction() {
-        window.location.href = "http://programminghead.com";
-      }
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -114,6 +265,74 @@
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
       }
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const id = document.getElementById("id");
+        const name = document.getElementById("name");
+	
+
+        name.addEventListener('input',()=>{
+			const nameBox = document.querySelector('.nameBox');
+			const nameText = document.querySelector('.nameText');
+			const namePattern = /^[a-zA-Z0-9]{5,12}$/;
+
+			if(name.value.match(namePattern)){
+				nameBox.classList.add('valid');
+				nameBox.classList.remove('invalid');
+				nameText.innerHTML = "Your username is Valid"; 
+			}else{
+				nameBox.classList.add('invalid');
+				nameBox.classList.remove('valid');
+				nameText.innerHTML = "Must be a valid username."; 
+			}
+		});
+		email.addEventListener('input',()=>{
+			const emailBox = document.querySelector('.emailBox');
+			const emailText = document.querySelector('.emailText');
+			const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+
+			if(email.value.match(emailPattern)){
+				emailBox.classList.add('valid');
+				emailBox.classList.remove('invalid');
+				emailText.innerHTML = "Your Email Address is Valid"; 
+			}else{
+				emailBox.classList.add('invalid');
+				emailBox.classList.remove('valid');
+				emailText.innerHTML = "Must be a valid email address."; 
+			}
+		});
+
+    password.addEventListener('input',()=>{
+			const passBox = document.querySelector('.passBox');
+			const passText = document.querySelector('.passText');
+			const passPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+
+			if(password.value.match(passPattern)){
+				passBox.classList.add('valid');
+				passBox.classList.remove('invalid');
+				passText.innerHTML = "Your Password is Valid"; 
+			}else{
+				passBox.classList.add('invalid');
+				passBox.classList.remove('valid');
+				passText.innerHTML = "Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number."; 
+			}
+		});
+
+    id.addEventListener('input',()=>{
+			const idBox = document.querySelector('.idBox');
+			const idText = document.querySelector('.idText');
+			const idPattern = /[0-9]/;
+
+			if(id.value.match(idPattern)){
+				idBox.classList.add('valid');
+				idBox.classList.remove('invalid');
+				idText.innerHTML = "Your id is Valid"; 
+			}else{
+				idBox.classList.add('invalid');
+				idBox.classList.remove('valid');
+				idText.innerHTML = "Your id must be a number"; 
+			}
+		});
     </script>
   </body>
 </html>

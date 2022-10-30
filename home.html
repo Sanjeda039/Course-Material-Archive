@@ -1,160 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUP COURSE MATERIAL ARCHIVE</title>
-    <meta name="google-signin-scope" content="profile email" />
-    <meta
-      name="google-signin-client_id"
-      content="YOUR_CLIENT_ID.apps.googleusercontent.com"
-    />
-    <script src="JS/home.js" defer></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="CSS/home.css" />
-    <link rel="stylesheet" href="">
-    <style>
-      .container {
-        position: relative;
-        text-align: center;
-        color: azure;
-      }
-      #container {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url(image/pexels-perfecto-capucine-1329571.jpg);
-        background-size: cover;
-        background-position: center;
-        height: 1000px;
-        width: 100%;
-      }
-      .welcome {
-        position: absolute;
-        top: 100px;
-        left: 60px;
-        color: white;
-        font-size: 40px;
-      }
-      .sub_section {
-        position: absolute;
-        top: 155px;
-        left: 60px;
-        font-size: 15px;
-      }
-      .signup {
-        background-color: blue;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        position: absolute;
-        top: 210px;
-        left: 60px;
-        border-radius: 4px;
-      }
-      .login {
-        background-color: white;
-        border: 2px solid blue;
-        color: blue;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        position: absolute;
-        top: 210px;
-        left: 210px;
-        border-radius: 4px;
-      }
-      .signup:hover {
-        background-color: white;
-        color: blue;
-        border: 2px solid blue;
-      }
-      .login:hover {
-        background-color: blue;
-        color: white;
-      }
-    </style>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUP COURSE MATERIAL ARCHIVE</title>
+  <meta name="google-signin-scope" content="profile email" />
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com" />
+  <script src="JS/home.js" defer></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/home.css" />
+
+  <style>
+    .container {
+      position: relative;
+      text-align: center;
+      color: azure;
+    }
+
+    #container {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(image/pexels-perfecto-capucine-1329571.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 1000px;
+      width: 100%;
+    }
+
+    .welcome {
+      position: absolute;
+      top: 150px;
+      left: 60px;
+      color: white;
+      font-size: 40px;
+    }
+
+    .sub_section {
+      position: absolute;
+      top: 220px;
+      left: 60px;
+      font-size: 18px;
+    }
+
+    .signup {
+      background-color: blue;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      position: absolute;
+      top: 280px;
+      left: 65px;
+      border-radius: 4px;
+    }
+
+    .login {
+      background-color: white;
+      border: 2px solid blue;
+      color: blue;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      position: absolute;
+      top: 280px;
+      left: 250px;
+      border-radius: 4px;
+    }
+
+    .signup:hover {
+      background-color: white;
+      color: blue;
+      border: 2px solid blue;
+    }
+
+    .login:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .sub_menu1 {
+      display: none;
+    }
+
+    .navbar ul li:hover .sub_menu1 {
+      display: block;
+      position: absolute;
+      background: white;
+      margin-top: 20px;
+      margin-left: -15px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo"></i>Course Material Archive</a>
+
     <nav class="navbar">
-      <div class="title" style="color: blue">COURSE MATERIAL ARCHIVE</div>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbar-links">
-        <ul>
-          <li><a href="home.html">home</a></li>
-          <li><a href="student_login.html">Login</a></li>
-          <li><a href="signup_student.html">Signup</a></li>
-        </ul>
-      </div>
+      <ul class="menu" style="display: flex;">
+        <li><a class="active" href="#home">home</a></li>
+        <li><a href="student_login.html">login</a>
+          <div class="sub_menu1">
+            <ul>
+              <li><a href="#">Student</a></li>
+              <li><a href="#">Teacher</a></li>
+              <li><a href="#">Admin</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="signup_student.html">signup</a></li>
+      </ul>
     </nav>
-    <div class="container" id="container">
-      <div class="welcome">Learn without Limits</div>
-      <div class="sub_section">
-        Start your online learning jouney today<br />
-        with all the required resources
-      </div>
-      <a href="signup_student.html"><button class="signup">Signup</button></a>
-      <a href="student_login.html"><button class="login">Log in</button></a>
+
+    <div class="icons">
+      <i class="fas fa-bars" id="menu-bars"></i>
+      <i class="fas fa-search" id="search-icon"></i>
     </div>
-    <section class="footer">
-      <div class="box-container">
-        <div class="box">
-          <h3>locations</h3>
-          <a href="#">Bangladesh</a>
-          <a href="#">japan</a>
-          <a href="#">russia</a>
-          <a href="#">USA</a>
-          <a href="#">france</a>
-        </div>
+  </header>
 
-        <div class="box">
-          <h3>quick links</h3>
-          <a href="#home">home</a>
-          <a href="#course">Course</a>
-          <a href="#lab">Lab</a>
-          <a href="#questiom">Question</a>
-          <a href="#note">Note</a>
-          <a href="#archive">Archive</a>
-        </div>
+  <!-- header section ends-->
 
-        <div class="box">
-          <h3>contact info</h3>
-          <a href="#">+01774-608677</a>
-          <a href="#">+111-222-3333</a>
-          <a href="#">sanjeda0390@gmail.com</a>
-          <a href="#">Dhaka, Bangladesh - 1206</a>
-        </div>
+  <!-- search form  -->
 
-        <div class="box">
-          <h3>follow us</h3>
-          <a href="#">facebook</a>
-          <a href="#">twitter</a>
-          <a href="#">instagram</a>
-          <a href="#">linkedin</a>
-        </div>
+  <form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box" />
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+  </form>
+  <div class="container" id="container">
+    <div class="welcome">Learn without Limits</div>
+    <div class="sub_section">
+      Start your online learning jouney today<br />
+      with all the required resources
+    </div>
+    <a href="signup_student.html"><button class="signup">Signup</button></a>
+    <a href="student_login.html"><button class="login">Log in</button></a>
+  </div>
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>locations</h3>
+        <a href="#">Bangladesh</a>
+        <a href="#">japan</a>
+        <a href="#">russia</a>
+        <a href="#">USA</a>
+        <a href="#">france</a>
       </div>
 
-      <div class="credit">
-        copyright @ 2022 by <span>ms. web designer</span>
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="index.html">home</a>
+        <a href="student_login.html">Login</a>
+        <a href="signup_student.html">Signup</a>
       </div>
-    </section>
 
-    <!-- footer section ends -->
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="#">+01774-608677</a>
+        <a href="#">+111-222-3333</a>
+        <a href="#">sanjeda0390@gmail.com</a>
+        <a href="#">Dhaka, Bangladesh - 1206</a>
+      </div>
 
-    <!-- loader part  -->
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#">facebook</a>
+        <a href="#">twitter</a>
+        <a href="#">instagram</a>
+        <a href="#">linkedin</a>
+      </div>
+    </div>
 
-  </body>
+    <div class="credit">
+      copyright @ 2022 by <span>ms. web designer</span>
+    </div>
+  </section>
+
+  <!-- footer section ends -->
+
+  <!-- loader part  -->
+  <!-- loader part  -->
+  <div class="loader-container">
+    <img src="image/loader.gif" alt="" />
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="JS/script.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2020 archive Admin-home</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="CSS/style.css" />
+  <style>
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header section starts      -->
+
+  <header>
+    <a href="#" class="logo"></i>Course Material Archive</a>
+
+    <nav class="navbar">
+      <a class="active" href="#home">home</a>
+      <a href="#course">course</a>
+      <a href="#book">book</a>
+      <a href="#lab">lab</a>
+      <a href="#note">note</a>
+      <a href="#question">question</a>
+      <a href="#archive">archive</a>
+      <a href="#users">Users</a>
+      <a href="index.html">Logout</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fas fa-bars" id="menu-bars"></i>
+      <i class="fas fa-search" id="search-icon"></i>
+      <a href="singleadmin.php" class="fas fa-user"></a>
+    </div>
+  </header>
+
+  <!-- header section ends-->
+
+  <!-- search form  -->
+
+  <form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box" />
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+  </form>
+
+  <!-- home section starts  -->
+
+  <section class="home" id="home">
+    <div class="swiper-container home-slider">
+
+      <div class="">
+
+        <div class="swiper-slide slide">
+          <div class="content">
+            <span>WELCOME To</span>
+            <h3>2020 Archived materials</h3>
+            <p>start your online learning journey today without any break</p>
+          </div>
+          <div class="image">
+            <img src="image/2020.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- home section ends -->
+
+  <!-- dishes section starts  -->
+
+  <section class="dishes" id="course">
+    <h1 class="heading">Course Materials</h1>
+    <div class="box-container">
+      <div class="box">
+        <a href="courseteacher/SRE.html" class="fas fa-eye"></a>
+        <img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        <h3>Database Management Systems</h3>
+        <a href="courseteacher/SRE.html" class="btn">course</a>
+      </div>
+
+      <div class="box">
+        <a href="courseteacher/WT.html" class="fas fa-eye"></a>
+        <img src="https://i0.wp.com/www.additudemag.com/wp-content/uploads/2021/09/GettyImages-1044168372.jpg?resize=480%2C270px&ssl=1" alt="" />
+        <h3>Math-III</h3>
+        <a href="courseteacher/WT.html" class="btn">course</a>
+      </div>
+
+      <div class="box">
+        <a href="courseteacher/TS.html" class="fas fa-eye"></a>
+        <img src="https://d28wu8o6itv89t.cloudfront.net/images/Economicsjpg-1595833672802.jpeg" alt="" />
+        <h3>Economics</h3>
+        <a href="courseteacher/TS.html" class="btn">course</a>
+      </div>
+      <div class="box">
+        <a href="courseteacher/ETA.html" class="fas fa-eye"></a>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvbjGSXpFgUcS-nXUc2O5qLK_0AEzrTEdG2Q&usqp=CAU" alt="" />
+        <h3>Digital Logic Design</h3>
+        <a href="courseteacher/ETA.html" class="btn">course</a>
+      </div>
+
+      <div class="box">
+        <a href="courseteacher/MCA.html" class="fas fa-eye"></a>
+        <img src="https://images.pexels.com/photos/3987066/pexels-photo-3987066.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+        <h3>object oriented design and programming II</h3>
+        <a href="courseteacher/MCA.html" class="btn">course</a>
+      </div>
+    </div>
+  </section>
+  <section class="dishes" id="book">
+    <h1 class="heading">Books</h1>
+    <div class="box-container">
+      <div class="box">
+        <a href="book/srebook.html" class="fas fa-eye"></a>
+        <img src="image/SRE book.png" alt="" />
+        <h3>Database Management Systems</h3>
+        <a href="book/srebook.html" class="btn">Book</a>
+      </div>
+      <div class="box">
+        <a href="book/srebook.html" class="fas fa-eye"></a>
+        <img src="image/WT Book.png" alt="" />
+        <h3>Math-III</h3>
+        <a href="book/wtbook.html" class="btn">Book</a>
+      </div>
+
+      <div class="box">
+        <a href="book/tsbook.html" class="fas fa-eye"></a>
+        <img src="image/TS Book.png" alt="" />
+        <h3>Economics</h3>
+        <a href="book/tsbook.html" class="btn">Book</a>
+      </div>
+      <div class="box">
+        <a href="book/tsbook.html" class="fas fa-eye"></a>
+        <img src="image/ETA Book.png" alt="" />
+        <h3>Digital Logic Design</h3>
+        <a href="book/eta.html" class="btn">Book</a>
+      </div>
+
+      <div class="box">
+        <a href="book/eta.html" class="fas fa-eye"></a>
+        <img src="image/mca book.jpg" alt="" />
+        <h3>object oriented design and programming II</h3>
+        <a href="book/mcabook.html" class="btn">Book</a>
+      </div>
+    </div>
+  </section>
+  <section class="dishes" id="note">
+    <h1 class="heading">Notes</h1>
+    <div class="box-container">
+      <div class="box">
+        <a href="note/SRE-Notesadm.html" class="fas fa-eye"></a>
+        <img src="image/srenote.jpeg" alt="" />
+        <h3>Database Management Systems</h3>
+        <a href="note/SRE-Notesadm.html" class="btn">Note</a>
+      </div>
+
+      <div class="box">
+        <a href="note/WT-Notes-Adm.html" class="fas fa-eye"></a>
+        <img src="image/wtnote.jpeg" alt="" />
+        <h3>object oriented design and programming II</h3>
+        <a href="note/WT-Notes-Adm.html" class="btn">Note</a>
+      </div>
+
+      <div class="box">
+        <a href="note/TSNOTEadm.html" class="fas fa-eye"></a>
+        <img src="image/tsnote.jpeg" alt="" />
+        <h3>Math-III</h3>
+        <a href="note/TSNOTEadm.html" class="btn">Note</a>
+      </div>
+      <div class="box">
+        <a href="note/ETA-notesadm.html" class="fas fa-eye"></a>
+        <img src="image/etanote.jpeg" alt="" />
+        <h3>Economics</h3>
+        <a href="note/ETA-notesadm.html" class="btn">Note</a>
+      </div>
+
+      <div class="box">
+        <a href="note/MCA-Notesadm.html" class="fas fa-eye"></a>
+        <img src="image/mcanote.jpeg" alt="" />
+        <h3>Digital Logic Design</h3>
+        <a href="note/MCA-Notesadm.html" class="btn">Note</a>
+      </div>
+    </div>
+  </section>
+  <section class="dishes" id="lab">
+    <h1 class="heading">Labs</h1>
+    <div class="box-container">
+    
+      <div class="box">
+        <a href="courseteacher/WT-LAB.html" class="fas fa-eye"></a>
+        <img src="image/sre lab.jpg" alt="" />
+        <h3>Database Management Systems Lab</h3>
+        <a href="courseteacher/WT-LAB.html" class="btn">Lab</a>
+      </div>
+
+      <div class="box">
+        <a href="courseteacher/TS-LAB.html" class="fas fa-eye"></a>
+        <img src="image/WT LAB.jpg" alt="" />
+        <h3>object oriented design and programming II lab</h3>
+        <a href="courseteacher/TS-LAB.html" class="btn">Lab</a>
+      </div>
+
+      <div class="box">
+        <a href="courseteacher/MCA-LAB.html" class="fas fa-eye"></a>
+        <img src="image/TS Lab.jpg" alt="" />
+        <h3>Digital Logic Design lab</h3>
+        <a href="courseteacher/MCA-LAB.html" class="btn">Lab</a>
+      </div>
+    </div>
+  </section>
+  <section class="dishes" id="question">
+    <h1 class="heading">Questions</h1>
+    <div class="box-container">
+      <div class="box">
+
+        <a href="question/sre.html" class="fas fa-eye"></a>
+        <img src="image/SRE question.png" alt="" />
+        <h3>Database Management Systems</h3>
+
+        <a href="question/sre.html" class="btn">Question</a>
+      </div>
+
+      <div class="box">
+        <a href="question/sre.html" class="fas fa-eye"></a>
+        <img src="image/WT question.png" alt="" />
+        <h3>Math-III</h3>
+        <a href="question/sre.html" class="btn">Question</a>
+      </div>
+
+      <div class="box">
+        <a href="question/ts.html" class="fas fa-eye"></a>
+        <img src="image/TS question.png" alt="" />
+        <h3>Economics</h3>
+        <a href="question/ts.html" class="btn">Question</a>
+      </div>
+      <div class="box">
+        <a href="question/eta.html" class="fas fa-eye"></a>
+        <img src="image/ETA.png" alt="" />
+        <h3>Digital Logic Design</h3>
+        <a href="question/eta.html" class="btn">Question</a>
+      </div>
+
+      <div class="box">
+        <a href="question/mca.html" class="fas fa-eye"></a>
+        <img src="image/MCA question.png" alt="" />
+        <h3>object oriented design and programming II</h3>
+        <a href="question/mca.html" class="btn">Question</a>
+      </div>
+    </div>
+  </section>
+  <section class="dishes" id="archive">
+    <h1 class="heading">Archive</h1>
+    <div class="box-container">
+      <div class="box">
+        <a href="2018_admin.html" class="fas fa-eye"></a>
+        <img
+          src="image/2018.png"
+          alt=""
+        />
+        <h3>2018</h3>
+        
+        <a href="2018_admin.html" class="btn">Archive</a>
+      </div>
+
+      <div class="box">
+        <a href="2019_admin.html" class="fas fa-eye"></a>
+        <img
+        src="image/2019.png"
+        alt="" />
+        <h3>2019</h3>
+        <a href="2019_admin.html" class="btn">Archive</a>
+      </div>
+
+      <div class="box">
+        
+        <a href="2020_admin.html" class="fas fa-eye"></a>
+        <img
+          src="image/2020.png"
+          alt=""
+        />
+        <h3>2020</h3>
+        <a href="2020_admin.html" class="btn">Archive</a>
+      </div>
+      <div class="box">
+        <a href="2021_admin.html" class="fas fa-eye"></a>
+        <img
+          src="image/2021.png"
+          alt=""
+        />
+        <h3>2021</h3>
+        <a href="2021_admin.html" class="btn">Archive</a>
+      </div>
+    </div>
+  </section>
+  <section class="dishes" id="users">
+    <h1 class="heading">Users</h1>
+    <div class="box-container">
+      <div class="box">
+        <a href="student.php" class="fas fa-eye"></a>
+        <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX17047523.jpg" alt="" />
+        <h3>Student</h3>
+        <a href="student.php" class="btn">Users</a>
+      </div>
+
+      <div class="box">
+        <a href="teacher.php" class="fas fa-eye"></a>
+        <img src="https://previews.123rf.com/images/dizanna/dizanna1509/dizanna150900057/44820238-teacher-word-cloud-education-concept.jpg" alt="" />
+        <h3>Teacher</h3>
+        <a href="teacher.php" class="btn">User</a>
+      </div>
+
+      <div class="box">
+
+        <a href="admin.php" class="fas fa-eye"></a>
+        <img src="https://comps.gograph.com/admin-word-cloud_gg98900659.jpg" alt="" />
+        <h3>Admin</h3>
+        <a href="admin.php" class="btn">Users</a>
+      </div>  
+    </div>
+  </section>
+  <!-- dishes section ends -->
+
+  <!-- about section starts  -->
+
+  <!-- order section ends -->
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>locations</h3>
+        <a href="#">Bangladesh</a>
+        <a href="#">japan</a>
+        <a href="#">russia</a>
+        <a href="#">USA</a>
+        <a href="#">france</a>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#home">home</a>
+        <a href="#course">Course</a>
+        <a href="#lab">Lab</a>
+        <a href="#questiom">Question</a>
+        <a href="#note">Note</a>
+        <a href="#archive">Archive</a>
+        <a href="index.html">Logout</a>
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="#">+01774-608677</a>
+        <a href="#">+111-222-3333</a>
+        <a href="#">sanjeda0390@gmail.com</a>
+        <a href="#">Dhaka, Bangladesh - 1206</a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#">facebook</a>
+        <a href="#">twitter</a>
+        <a href="#">instagram</a>
+        <a href="#">linkedin</a>
+      </div>
+    </div>
+
+    <div class="credit">
+      copyright @ 2022 by <span>ms. web designer</span>
+    </div>
+  </section>
+
+  <!-- footer section ends -->
+
+  <!-- loader part  -->
+  <div class="loader-container">
+    <img src="image/loader.gif" alt="" />
+  </div>
+
+  <script src="https://unpkg.com/swiper@8.4.4/swiper-bundle.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="JS/script.js"></script>
+</body>
+
+</html>
