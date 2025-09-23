@@ -7,7 +7,7 @@ menu.onclick = () => {
   navbar.classList.toggle('active');
 }
 
-// Scroll active link
+// Active link on scroll
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header .navbar a');
 
@@ -21,9 +21,9 @@ window.onscroll = () => {
     let offset = sec.offsetTop - 150;
     let id = sec.getAttribute('id');
 
-    if(top >= offset && top < offset + height){
-      navLinks.forEach(links => links.classList.remove('active'));
-      document.querySelector('header .navbar a[href*='+id+']').classList.add('active');
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      document.querySelector('header .navbar a[href*=' + id + ']').classList.add('active');
     }
   });
 }
@@ -32,7 +32,6 @@ window.onscroll = () => {
 document.querySelector('#search-icon').onclick = () => {
   document.querySelector('#search-form').classList.toggle('active');
 }
-
 document.querySelector('#close').onclick = () => {
   document.querySelector('#search-form').classList.remove('active');
 }
@@ -41,35 +40,24 @@ document.querySelector('#close').onclick = () => {
 var swiper = new Swiper(".home-slider", {
   spaceBetween: 30,
   centeredSlides: true,
+  loop: true,
   autoplay: {
-    delay: 3000, // you can adjust
+    delay: 3000,
     disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  loop: true,
 });
 
-// Swiper review slider (if you have one)
-var swiper2 = new Swiper(".review-slider", {
-  spaceBetween: 20,
-  centeredSlides: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  loop: true,
-  breakpoints: {
-    0: { slidesPerView: 1 },
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  },
-});
+// Loader fade-out
+function loader(){
+  document.querySelector('.loader-container').classList.add('fade-out');
+}
 
-// Loader
-window.addEventListener("load", () => {
-  document.querySelector('.loader-container').style.display = "none";
-});
+function fadeOut(){
+  setTimeout(loader, 3000);
+}
+
+window.onload = fadeOut;
