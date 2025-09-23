@@ -6,20 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student-home</title>
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-  <!-- Custom CSS -->
+  <!-- font awesome cdn link  -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <!-- custom css file link  -->
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-
-  <!-- Header -->
+  <!-- header section starts -->
   <header>
     <a href="#" class="logo">Course Material Archive</a>
+
     <nav class="navbar">
       <a class="active" href="#home">home</a>
       <a href="#course">course</a>
@@ -29,93 +28,44 @@
       <a href="#question">question</a>
       <a href="#archive">archive</a>
     </nav>
+
     <div class="icons">
       <i class="fas fa-bars" id="menu-bars"></i>
       <i class="fas fa-search" id="search-icon"></i>
       <a href="#" class="fas fa-user"></a>
     </div>
   </header>
+  <!-- header section ends -->
 
-  <!-- Search Form -->
+  <!-- search form  -->
   <form action="" id="search-form">
-    <input type="search" placeholder="search here..." id="search-box"/>
+    <input
+      type="search"
+      placeholder="search here..."
+      id="search-box"
+    />
     <label for="search-box" class="fas fa-search"></label>
     <i class="fas fa-times" id="close"></i>
   </form>
 
-  <!-- Home Section with Swiper -->
+  <!-- home section starts -->
   <section class="home" id="home">
-    <div class="swiper home-slider">
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div class="swiper-slide slide">
-          <div class="content">
-            <span>WELCOME To</span>
-            <h3>Course Material Archive</h3>
-            <p>Start your online learning journey today without any break</p>
-          </div>
-          <div class="image">
-            <img src="image/home.webp" alt="home image"/>
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="swiper-slide slide">
-          <div class="content">
-            <span>LEARN</span>
-            <h3>New Courses Everyday</h3>
-            <p>Expand your knowledge with our curated course materials</p>
-          </div>
-          <div class="image">
-            <img src="image/home2.webp" alt="home image 2"/>
-          </div>
-        </div>
+    <div class="slide">
+      <div class="content">
+        <span>WELCOME To</span>
+        <h3>Course Material Archive</h3>
+        <p>Start your online learning journey today without any break</p>
       </div>
-      <!-- Pagination -->
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <!-- Courses Section -->
-  <section class="dishes" id="course">
-    <h1 class="heading">Course Materials</h1>
-    <div class="box-container">
-      <div class="box">
-        <a href="coursestudent/SRE.html" class="fas fa-eye"></a>
-        <img src="image/sre.jpeg" alt="" />
-        <h3>Software Requirement and Analysis</h3>
-        <a href="coursestudent/SRE.html" class="btn">course</a>
-      </div>
-      <div class="box">
-        <a href="coursestudent/WT.html" class="fas fa-eye"></a>
-        <img src="image/WT.webp" alt="" />
-        <h3>Web Technology</h3>
-        <a href="coursestudent/WT.html" class="btn">course</a>
-      </div>
-      <div class="box">
-        <a href="coursestudent/TS.html" class="fas fa-eye"></a>
-        <img src="image/ts.jpeg" alt="" />
-        <h3>Telecommunication System</h3>
-        <a href="coursestudent/TS.html" class="btn">course</a>
-      </div>
-      <div class="box">
-        <a href="coursestudent/ETA.html" class="fas fa-eye"></a>
-        <img src="image/eta.jpeg" alt="" />
-        <h3>Electromagnetic Theory and Antenna</h3>
-        <a href="coursestudent/ETA.html" class="btn">course</a>
-      </div>
-      <div class="box">
-        <a href="coursestudent/MCA.html" class="fas fa-eye"></a>
-        <img src="image/MCA.jpeg" alt="" />
-        <h3>Microprocessor and Computer Architecture</h3>
-        <a href="coursestudent/MCA.html" class="btn">course</a>
+      <div class="image">
+        <img src="image/home.webp" alt="home image" />
       </div>
     </div>
   </section>
+  <!-- home section ends -->
 
-  <!-- Books, Notes, Labs, Questions, Archive Sections -->
-  <!-- Keep your existing HTML as is for these sections -->
+  <!-- other sections (course, book, note, lab, question, archive) go here as in your previous code -->
 
-  <!-- Footer -->
+  <!-- footer section -->
   <section class="footer">
     <div class="box-container">
       <div class="box">
@@ -126,6 +76,7 @@
         <a href="#">USA</a>
         <a href="#">France</a>
       </div>
+
       <div class="box">
         <h3>quick links</h3>
         <a href="#home">home</a>
@@ -135,13 +86,15 @@
         <a href="#note">Note</a>
         <a href="#archive">Archive</a>
       </div>
+
       <div class="box">
         <h3>contact info</h3>
-        <a href="#">+01774-608677</a>
+        <a href="#">+01774-2304229</a>
         <a href="#">+111-222-3333</a>
         <a href="mailto:sanjeda0390@gmail.com">sanjeda0390@gmail.com</a>
         <a href="#">Dhaka, Bangladesh - 1206</a>
       </div>
+
       <div class="box">
         <h3>follow us</h3>
         <a href="#">facebook</a>
@@ -150,20 +103,18 @@
         <a href="#">linkedin</a>
       </div>
     </div>
+
     <div class="credit">
       copyright @ 2022 by <span>ms. web designer</span>
     </div>
   </section>
 
-  <!-- Loader -->
+  <!-- loader part -->
   <div class="loader-container">
     <img src="image/loader.gif" alt="" />
   </div>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- Custom JS -->
+  <!-- custom js file link -->
   <script src="JS/script.js"></script>
-
 </body>
 </html>
